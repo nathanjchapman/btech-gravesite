@@ -1,0 +1,310 @@
+/* ============================== FONTS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    font-size: 100%;
+    /*16px*/
+}
+
+
+
+/* ============================== GENERAL
+    Base size: 16px
+    Scale: 1.25 Major third
+    Font: Heebo and PT Serif
+    Colors:
+        Black     #232326,
+        Dark Blue #010326
+
+*/
+
+body {
+    background: white;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #232326;
+}
+p {
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+}
+section p:last-child {
+    margin-bottom: 0;
+}
+a {
+    font-family: 'Heebo', sans-serif;
+    color: #010326;
+}
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    line-height: 1.3;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+    text-shadow: 0 3px 10px #232326;
+}
+h2 {
+    font-size: 2.441rem;
+}
+h3 {
+    font-size: 1.953rem;
+}
+h4 {
+    font-size: 1.563rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+small {
+    font-size: 0.8rem;
+}
+
+
+
+/* ============================== GENERAL
+*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    max-width: 1024px;
+    margin: 0 1rem;
+}
+
+article header {
+    margin-bottom: 1rem;
+}
+
+
+
+/* ============================== NAVIGATION
+*/
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #232326;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a,
+.navbar h4 {
+    display: inline-block;
+    color: #808080;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+.navbar h4 {
+    margin: 0;
+    color: #fff;
+}
+.navbar ul li a:hover {
+    color: white;
+}
+
+
+
+/* ============================== HERO
+*/
+
+#hero {
+    background: url("../images/graveyard_small.jpg") center no-repeat;
+    width: 100%;
+    height: 780px;
+    color: #fff;
+    display: flex;
+    margin-top: -1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-tombstones input {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url("../images/search_icon.png");
+    background-position: 10px 20px;
+    background-repeat: no-repeat;
+    border-bottom: 4px dashed #fff;
+
+}
+#search-tombstones input:focus {
+    border-bottom: 4px solid #fff;
+}
+
+
+
+/* ============================== CLASSES & CARDS
+*/
+
+#classes {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 1em;
+}
+
+.card {
+    display: flex;
+    align-items: stretch;
+
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #bdc3c7;
+    box-shadow: 0 0 4px #bdc3c7;
+
+    flex-direction: column;
+}
+
+
+
+
+
+/* ============================== MODAL
+*/
+
+.modal {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+    height: 320px;
+    max-height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-top: 2rem solid #232326;
+    border-bottom: 2rem solid #232326;
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.closed {
+    display: none;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+    padding: 1.5rem 2rem 0;
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.close-button {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+/* ============================== FORMS
+*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'PT Serif', serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'PT Serif', serif;
+}
+input {
+    border: none;
+    padding: 0.25em;
+    outline: none;
+    box-sizing: border-box;
+}
+input[type="search"] {
+    border: none;
+
+}
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    border-bottom: 2px dashed #bdc3c7;
+    width: 100%;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-bottom: 2px solid #232326;
+}
+
+input[type="submit"] {
+    font-family: 'Heebo', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    /*border: 2px solid transparent;*/
+    background:#4c4c4c;
+    color:#fff;
+    box-shadow: 0 3px 0 #333333;
+    cursor: pointer;
+}
+
+
+/* ============================== FORMS
+*/
+
+footer {
+    margin-top: 3rem;
+    background-color: #232326;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li a,
+footer nav ul li {
+    display: inline-block;
+    color: #808080;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+footer nav a:hover {
+    color: #fff;
+}

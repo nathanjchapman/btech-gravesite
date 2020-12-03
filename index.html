@@ -5,30 +5,106 @@
         <meta name="description" content="A website description">
         <meta name="author" content="Nathan Chapman">
         <title>The Grave Site</title>
+        <link rel="stylesheet" href="styles/lib/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <h1>Welcome to the Grave Site</h1>
-        <h2>The Grave Site</h2>
-        <p>As you develop the Grave Site you will learn the basics of coding a website.</p>
+        <header>
+            <div class="navbar">
+                <h4>Grave Site</h4>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#login" id="open-button">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-        <hr>
+        <!-- ============ MODAL -->
+        <div class="modal-overlay closed" id="modal-overlay"></div>
+        <div id="modal" class="modal closed">
+            <div class="modal-content">
+                <div class="login">
+                    <h3>Log in</h3>
+                    <form method="POST" action="index.html">
+                        <p>
+                            <label>Email:</label><br>
+                            <input type="email" name="email" value="" placeholder="name@email.com">
+                        </p>
+                        <p>
+                            <label>Password:</label><br>
+                            <input type="Password" name="password" value="" placeholder="supersecretpassword">
+                        </p>
+                        <p>
+                            <input type="submit" name="login" value="Login"> or <a class="close-button" id="close-button" href="">Cancel</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-        <h3>Web Development Essentials</h3>
-        <p>In <em>Web Essentials</em> we will learn how to code the basic structure of the page using HTML5 as well as style the page using CSS3.</p>
+        <!-- ============ HERO -->
+        <section id="hero">
+            <h1>Welcome to Grave Site</h1>
 
-        <hr>
+            <form id="search-tombstones" method="" action="index.html">
+                <input type="search" name="search" placeholder="Start digging&hellip;">
+            </form>
+        </section>
 
-        <h3>Web Databases</h3>
-        <p>In <strong>Web Databases</strong> you will learn how to to set up and structure a Database of tomb stones using MySQL.</p>
+        <!-- ============ MAIN -->
+        <main>
+            <article>
+                <header id="description">
+                    <h2>Grave Site</h2>
+                    <p>As you develop Grave Site you will learn the basics of coding a website. The course will cover many different tags but no one can remember all of them. If you need to look up or reference a tag or just remember what one does, go look around: <a href="http://www.w3schools.com/">w3schools.com</a>.</p>
+                    <p>By the end of this class you will have completed most of the core classes in the program.</p>
+                </header>
 
-        <hr>
 
-        <h3>Server Side Scripting</h3>
-        <p>In <i>server side scripting</i> we will be teaching you PHP which allows you to make a website dynamic and interact with (retrieve and post data) a Database.</p>
+                <section id="classes">
+                    <div id="essentials" class="card">
+                        <img src="images/squirrel.jpg">
+                        <h3>Web Development Essentials</h3>
+                        <p>In <em>Web Essentials</em> we will learn how to code the basic structure of the page using HTML5 as well as style the page using CSS3.</p>
+                    </div>
+                    <div id="databases" class="card">
+                        <img src="images/barn.jpg">
+                        <h3>Web Databases</h3>
+                        <p>In <strong>Web Databases</strong> you will learn how to to set up and structure a Database of tomb stones using MySQL.</p>
+                    </div>
+                    <div id="server-scripting" class="card">
+                        <img src="images/home.jpg">
+                        <h3>Server Side Scripting</h3>
+                        <p>In <i>server side scripting</i> we will be teaching you PHP which allows you to make a website dynamic and interact with (retrieve and post data) a Database.</p>
+                    </div>
+                    <div id="client-scripting" class="card">
+                        <img src="images/cat.jpg">
+                        <h3>Client Side Scripting</h3>
+                        <p><b>Client Side Scripting</b> will cover JavaScript &amp; JQuery adding additional functionality to the website and completing the basic languages used in Web Development.</p>
+                </section>
+            </article>
+        </main>
 
-        <hr>
+        <!-- ============ FOOTER -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <p>Copyright ©2020 Nathan Chapman. All rights reserved.</p>
+        </footer>
 
-        <h3>Client Side Scripting</h3>
-        <p><b>Client Side Scripting</b> will cover JavaScript &amp; JQuery adding additional functionality to the website and completing the basic languages used in Web Development. <br> By the end of this class you will have completed most of the core classes in the program.</p>
+        <script src="scripts/index.js"></script>
     </body>
 </html>
