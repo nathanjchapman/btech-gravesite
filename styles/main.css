@@ -4,16 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-    font-size: 100%;
-    /*16px*/
+    font-size: 100%; /*16px*/
 }
 
 
 
 /* ============================== GENERAL
     Base size: 16px
-    Scale: 1.25 Major third
-    Font: Heebo and PT Serif
+    Type-scale: 1.25 Major third
+    Fonts: Heebo and PT Serif
     Colors:
         Black     #232326,
         Dark Blue #010326
@@ -64,6 +63,11 @@ h5 {
 }
 small {
     font-size: 0.8rem;
+}
+
+dt {
+    font-weight: 700;
+    font-style: italic;
 }
 
 
@@ -128,7 +132,6 @@ article header {
 */
 
 #hero {
-    background: url("../images/graveyard_small.jpg") center no-repeat;
     width: 100%;
     height: 780px;
     color: #fff;
@@ -159,7 +162,7 @@ article header {
 /* ============================== CLASSES & CARDS
 */
 
-#classes {
+#classes, #team, #blog {
     /* Grid Fallback */
     display: flex;
     flex-wrap: wrap;
@@ -187,8 +190,6 @@ article header {
 
     flex-direction: column;
 }
-
-
 
 
 
@@ -240,13 +241,18 @@ article header {
 /* ============================== FORMS
 */
 
+label {
+    font-family: 'Heebo', sans-serif;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-family: 'PT Serif', serif;
 }
 ::-moz-placeholder { /* Firefox 19+ */
     font-family: 'PT Serif', serif;
 }
-input {
+
+input, textarea {
     border: none;
     padding: 0.25em;
     outline: none;
@@ -258,14 +264,16 @@ input[type="search"] {
 }
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="phone"] {
     border-bottom: 2px dashed #bdc3c7;
     width: 100%;
 }
 
 input[type="email"]:focus,
 input[type="password"]:focus,
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="phone"]:focus {
     border-bottom: 2px solid #232326;
 }
 
@@ -279,8 +287,18 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+textarea {
+    border: 2px dashed #bdc3c7;
+    height: 200px;
+    width: 100%;
+    resize: none;
+}
+textarea:focus {
+    border: 2px solid #232326;
+}
 
-/* ============================== FORMS
+
+/* ============================== FOOTER
 */
 
 footer {
@@ -307,4 +325,53 @@ footer nav ul li {
 }
 footer nav a:hover {
     color: #fff;
+}
+
+
+
+/* ============================== INDEX PAGE
+*/
+
+.hero-index {
+    background: url("../images/graveyard_small.jpg") center no-repeat;
+}
+
+
+
+/* ============================== ABOUT PAGE
+*/
+
+.hero-about {
+    background: url("../images/about.jpg") center no-repeat;
+}
+
+
+
+/* ============================== BLOG PAGE
+*/
+
+.hero-blog {
+    background: url("../images/letters.jpg") center no-repeat;
+}
+
+
+
+/* ============================== CONTACT PAGE
+*/
+
+.hero-contact {
+    background: url("../images/contact.jpg") center no-repeat;
+}
+
+#contact {
+    min-width: 500px;
+}
+
+
+
+/* ============================== FAQ PAGE
+*/
+
+.hero-faq {
+    background: url("../images/faq.jpg") center no-repeat;
 }
