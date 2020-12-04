@@ -166,12 +166,6 @@ article header {
     /* Grid Fallback */
     display: flex;
     flex-wrap: wrap;
-
-    /* Supports Grid */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-auto-rows: minmax(400px, auto);
-    grid-gap: 1em;
 }
 
 .card {
@@ -179,9 +173,8 @@ article header {
     align-items: stretch;
 
     /* Flex Fallback */
-    margin-left: 5px;
-    margin-right: 5px;
-    flex: 1 1 200px;
+    margin: 0.2rem;
+    flex: 1 1 0;
 
     padding: 1em;
     background-color: #fff;
@@ -374,4 +367,56 @@ footer nav a:hover {
 
 .hero-faq {
     background: url("../images/faq.jpg") center no-repeat;
+}
+
+
+
+/* ============================== MOBILE
+*/
+
+@media all and (max-width: 600px) {
+    article {
+        width: 100%;
+        margin: 0 1rem;
+
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    article header, article section {
+        padding: 0 1rem;
+    }
+    #hero {
+        text-align: center;
+    }
+    #search-tombstones input {
+        font-size: 1.5em;
+        background-position: 5px 10px;
+    }
+    .navbar {
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .navbar ul li a {
+        padding: 0.75rem 0.5rem;
+    }
+    .card {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    #contact {
+        min-width: 0;
+    }
+
+    #classes, #team, #blog {
+        /* Grid Fallback */
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
