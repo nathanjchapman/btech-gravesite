@@ -389,7 +389,7 @@ footer nav a:hover {
         max-width: 100%;
         height: auto;
     }
-    article header, article section {
+    article header, article section, footer {
         padding: 0 1rem;
     }
     #hero {
