@@ -327,6 +327,7 @@ footer nav a:hover {
 
 .hero-index {
     background: url("../images/graveyard_small.jpg") center no-repeat;
+    background-size: cover;
 }
 
 
@@ -336,6 +337,7 @@ footer nav a:hover {
 
 .hero-about {
     background: url("../images/about.jpg") center no-repeat;
+    background-size: cover;
 }
 
 
@@ -345,6 +347,7 @@ footer nav a:hover {
 
 .hero-blog {
     background: url("../images/letters.jpg") center no-repeat;
+    background-size: cover;
 }
 
 
@@ -354,6 +357,7 @@ footer nav a:hover {
 
 .hero-contact {
     background: url("../images/contact.jpg") center no-repeat;
+    background-size: cover;
 }
 
 #contact {
@@ -367,6 +371,7 @@ footer nav a:hover {
 
 .hero-faq {
     background: url("../images/faq.jpg") center no-repeat;
+    background-size: cover;
 }
 
 
