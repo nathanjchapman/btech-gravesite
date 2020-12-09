@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en-US">
+<head>
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -8,96 +8,88 @@
         <meta name="author" content="Nathan Chapman">
         <title>The Grave Site</title>
         <link rel="stylesheet" href="styles/lib/normalize.css">
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-                <h4>Grave Site</h4>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#login" id="open-button">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog.html">Blog</a>
+            <a href="#login" id="open-button">Login</a>
+        </nav>
 
-        <!-- ============ MODAL -->
-        <div class="modal-overlay closed" id="modal-overlay"></div>
-        <div id="modal" class="modal closed">
-            <div class="modal-content">
-                <div class="login">
-                    <h3>Log in</h3>
-                    <form method="POST" action="index.html">
-                        <p>
-                            <label>Email:</label><br>
-                            <input type="email" name="email" value="" placeholder="name@email.com">
-                        </p>
-                        <p>
-                            <label>Password:</label><br>
-                            <input type="Password" name="password" value="" placeholder="supersecretpassword">
-                        </p>
-                        <p>
-                            <input type="submit" name="login" value="Login"> or <a class="close-button" id="close-button" href="">Cancel</a>
-                        </p>
-                    </form>
-                </div>
+        <div class="hero hero-faq">
+        </div>
+    </header>
+
+    <!-- ============ MODAL -->
+    <div class="modal-overlay closed" id="modal-overlay"></div>
+    <div id="modal" class="modal closed">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close-button" id="close-button" href="">X</a>
+                <h3>Sign in</h3>
+            </div>
+
+            <div class="login">
+                
+                <form method="POST" action="index.html">
+                    <p>
+                        <input type="email" name="email" value="" placeholder="Email">
+                    </p>
+                    <p>
+                        <input type="Password" name="password" value="" placeholder="Password">
+                    </p>
+                    <p>
+                        <input type="submit" name="login" value="Login">
+                    </p>
+                </form>
             </div>
         </div>
-
-        <!-- ============ HERO -->
-        <section id="hero"  class="hero hero-faq">
-            <h1>Frequently Asked Questions</h1>
-            
-        </section>
-
-        <!-- ============ MAIN -->
-        <main>
-            <article>
-                <header id="description">
-                    <h2>Answers, like paper, like to be kept D.R.Y.</h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro qui, exercitationem consequatur ullam doloribus assumenda aliquam eaque nostrum veritatis unde nobis, distinctio. Repellendus repellat necessitatibus delectus totam alias. Consequuntur, atque.</p>
-                </header>
+    </div>
 
 
-                <section id="answers">
-                    <dl>
-                        <dt>Can you find my ancestors name?</dt>
-                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
+    <main>
+        <article>
+            <header>
+                <h2>Frequently Asked Questions</h2>
+                <hr>
+                <h4>How can I help?</h4>
+            </header>
 
-                        <dt>Can you locate a family member?</dt>
-                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
 
-                        <dt>Can you check crime records?</dt>
-                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
+            <section class="general-content">
+                <dl>
+                    <dt>Can you find my ancestors name?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
 
-                        <dt>Can you go any faster?</dt>
-                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
-                    </dl>
-                </section>
-            </article>
-        </main>
+                    <dt>Can you locate a family member?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
 
-        <!-- ============ FOOTER -->
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-            <p>Copyright ©2020 Nathan Chapman. All rights reserved.</p>
-        </footer>
+                    <dt>Can you check crime records?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
 
-        <script src="scripts/index.js"></script>
-    </body>
+                    <dt>Can you go any faster?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reiciendis incidunt nostrum. Provident, iusto, modi, voluptas voluptates corporis atque accusantium facilis aspernatur repudiandae minima unde ipsam repellat doloribus quisquam eum.</dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+
+
+    <footer>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog.html">Blog</a>
+        </nav>
+    </footer>
+</body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en-US">
+<head>
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -8,107 +8,100 @@
         <meta name="author" content="Nathan Chapman">
         <title>The Grave Site</title>
         <link rel="stylesheet" href="styles/lib/normalize.css">
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-                <h4>Grave Site</h4>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#login" id="open-button">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog.html">Blog</a>
+            <a href="#login" id="open-button">Login</a>
+        </nav>
 
-        <!-- ============ MODAL -->
-        <div class="modal-overlay closed" id="modal-overlay"></div>
-        <div id="modal" class="modal closed">
-            <div class="modal-content">
-                <div class="login">
-                    <h3>Log in</h3>
-                    <form method="POST" action="index.html">
-                        <p>
-                            <label>Email:</label><br>
-                            <input type="email" name="email" value="" placeholder="name@email.com">
-                        </p>
-                        <p>
-                            <label>Password:</label><br>
-                            <input type="Password" name="password" value="" placeholder="supersecretpassword">
-                        </p>
-                        <p>
-                            <input type="submit" name="login" value="Login"> or <a class="close-button" id="close-button" href="">Cancel</a>
-                        </p>
-                    </form>
-                </div>
+        <div class="hero hero-index">
+            <h1>Welcome to the Grave Site</h1>
+            <form>
+                <input id="find-ancestor" type="search" name="search" placeholder="Find your Ancestor&hellip;">
+            </form>
+        </div>
+    </header>
+
+    <!-- ============ MODAL -->
+    <div class="modal-overlay closed" id="modal-overlay"></div>
+    <div id="modal" class="modal closed">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close-button" id="close-button" href="">X</a>
+                <h3>Sign in</h3>
+            </div>
+
+            <div class="login">
+                
+                <form method="POST" action="index.html">
+                    <p>
+                        <input type="email" name="email" value="" placeholder="Email">
+                    </p>
+                    <p>
+                        <input type="Password" name="password" value="" placeholder="Password">
+                    </p>
+                    <p>
+                        <input type="submit" name="login" value="Login">
+                    </p>
+                </form>
             </div>
         </div>
-
-        <!-- ============ HERO -->
-        <section id="hero" class="hero hero-index">
-            <h1>Welcome to Grave Site</h1>
-
-            <form id="search-tombstones" method="" action="index.html">
-                <input type="search" name="search" placeholder="Start digging&hellip;">
-            </form>
-        </section>
-
-        <!-- ============ MAIN -->
-        <main>
-            <article>
-                <header id="description">
-                    <h2>Grave Site</h2>
-                    <hr>
-                    <p>As you develop Grave Site you will learn the basics of coding a website. The course will cover many different tags but no one can remember all of them. If you need to look up or reference a tag or just remember what one does, go look around: <a href="http://www.w3schools.com/">w3schools.com</a>.</p>
-                    <p>By the end of this class you will have completed most of the core classes in the program.</p>
-                </header>
+    </div>
 
 
-                <section id="classes">
-                    <div id="essentials" class="card">
-                        <img src="images/squirrel.jpg">
-                        <h3>Web Development Essentials</h3>
-                        <p>In <em>Web Essentials</em> we will learn how to code the basic structure of the page using HTML5 as well as style the page using CSS3.</p>
-                    </div>
-                    <div id="databases" class="card">
-                        <img src="images/barn.jpg">
-                        <h3>Web Databases</h3>
-                        <p>In <strong>Web Databases</strong> you will learn how to to set up and structure a Database of tomb stones using MySQL.</p>
-                    </div>
-                    <div id="server-scripting" class="card">
-                        <img src="images/home.jpg">
-                        <h3>Server Side Scripting</h3>
-                        <p>In <i>server side scripting</i> we will be teaching you PHP which allows you to make a website dynamic and interact with (retrieve and post data) a Database.</p>
-                    </div>
-                    <div id="client-scripting" class="card">
-                        <img src="images/cat.jpg">
-                        <h3>Client Side Scripting</h3>
-                        <p><b>Client Side Scripting</b> will cover JavaScript &amp; JQuery adding additional functionality to the website and completing the basic languages used in Web Development.</p>
-                    </div>
-                </section>
-            </article>
-        </main>
+    <main>
+        <article>
+            <header id="description">
+                <h2>Grave Site</h2>
+                <hr>
+                <p>As you develop Grave Site you will learn the basics of coding a website. The course will cover many different tags but no one can remember all of them. If you need to look up or reference a tag or just remember what one does, go look around: <a href="http://www.w3schools.com/">w3schools.com</a>.</p>
+                <p>By the end of this class you will have completed most of the core classes in the program.</p>
+            </header>
 
-        <!-- ============ FOOTER -->
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-            <p>Copyright ©2020 Nathan Chapman. All rights reserved.</p>
-        </footer>
 
-        <script src="scripts/index.js"></script>
-    </body>
+            <section id="classes">
+                <div id="essentials" class="card">
+                    <img src="images/squirrel.jpg">
+                    <h3>Web Development Essentials</h3>
+                    <p>In <em>Web Essentials</em> we will learn how to code the basic structure of the page using HTML5 as well as style the page using CSS3.</p>
+                </div>
+                <div id="databases" class="card">
+                    <img src="images/barn.jpg">
+                    <h3>Web Databases</h3>
+                    <p>In <strong>Web Databases</strong> you will learn how to to set up and structure a Database of tomb stones using MySQL.</p>
+                </div>
+                <div id="server-scripting" class="card">
+                    <img src="images/home.jpg">
+                    <h3>Server Side Scripting</h3>
+                    <p>In <i>server side scripting</i> we will be teaching you PHP which allows you to make a website dynamic and interact with (retrieve and post data) a Database.</p>
+                </div>
+                <div id="client-scripting" class="card">
+                    <img src="images/cat.jpg">
+                    <h3>Client Side Scripting</h3>
+                    <p><b>Client Side Scripting</b> will cover JavaScript &amp; JQuery adding additional functionality to the website and completing the basic languages used in Web Development.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+
+    <footer>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog.html">Blog</a>
+        </nav>
+    </footer>
+</body>
 </html>
