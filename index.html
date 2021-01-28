@@ -9,6 +9,8 @@
         <title>The Grave Site</title>
         <link rel="stylesheet" href="styles/lib/normalize.css">
         <link rel="stylesheet" href="styles/main.css?v=1.1">
+        <script src="scripts/jquery.js" defer></script>
+        <script src="scripts/jquery.validation.js" defer></script>
         <script src="scripts/index.js" defer></script>
 </head>
 <body>
@@ -24,7 +26,7 @@
 
         <div class="hero hero-index">
             <h1>Welcome to the Grave Site</h1>
-            <form>
+            <form method="POST" action="index.html" name="find-ancestor-form">
                 <input id="find-ancestor" type="search" name="search" placeholder="Find your Ancestor&hellip;">
             </form>
         </div>
@@ -41,7 +43,7 @@
 
             <div class="login">
                 
-                <form method="POST" action="index.html">
+                <form method="POST" action="index.html" name="login-form">
                     <p>
                         <input type="email" name="email" value="" placeholder="Email">
                     </p>

@@ -9,6 +9,8 @@
         <title>The Grave Site</title>
         <link rel="stylesheet" href="styles/lib/normalize.css">
         <link rel="stylesheet" href="styles/main.css?v=1.1">
+        <script src="scripts/jquery.js" defer></script>
+        <script src="scripts/jquery.validation.js" defer></script>
         <script src="scripts/index.js" defer></script>
 </head>
 <body>
@@ -37,7 +39,7 @@
 
             <div class="login">
                 
-                <form method="POST" action="index.html">
+                <form method="POST" action="index.html" name="login-form">
                     <p>
                         <input type="email" name="email" value="" placeholder="Email">
                     </p>
@@ -62,16 +64,16 @@
             </header>
 
             <section class="contact">
-                <form>
+                <form method="POST" action="contact.html" name="contact-form">
                     <div class="contact-fields">
-                        <input type="text" name="" placeholder="Full Name">
-                        <input type="text" name="" placeholder="Subject">
-                        <input type="text" name="" placeholder="Phone Number">
-                        <input type="text" name="" placeholder="Email Address">
+                        <p><input type="text" name="fullname" placeholder="Full Name"></p>
+                        <p><input type="text" name="subject" placeholder="Subject"></p>
+                        <p><input type="text" name="phone" placeholder="Phone Number"></p>
+                        <p><input type="text" name="email" placeholder="Email Address"></p>
                     </div>
                     <div>
                     <label>Message</label>
-                    <textarea></textarea>
+                    <textarea name="message"></textarea>
                     <p>
                         <input type="submit" name="login" value="Submit">
                     </p>
